@@ -13,6 +13,7 @@ public class MakeADiamond  implements Directions{
 		MakeADiamond mad = new MakeADiamond();
 		
 		mad.prompt();
+		
 	}
 
 	private void prompt() {
@@ -22,9 +23,8 @@ public class MakeADiamond  implements Directions{
 		//int beepersOnSide = keyboard.nextInt();
 		//System.out.println(beepersOnSide);
 		World.setVisible(true);
-		World.setDelay(1);
-//		World.setDelay(100);
-	
+		World.setDelay(10);
+//		World.setSize(100, 100);
 //		System.out.println("Which direction?  Up or down");
 //		 upOrDown = keyboard.nextLine();
 ////		if(upOrDown .equalsIgnoreCase("up") ){
@@ -34,8 +34,11 @@ public class MakeADiamond  implements Directions{
 ////			System.out.println("You picked down!");
 ////		}
 //		System.out.println("Your pick was: "+upOrDown);
-		
+		drawFilledDiamond();
 
+	}
+	
+	private void drawFilledDiamond() {
 		drawDiamond(4);
 		reset();
 		drawDiamond(3);
@@ -54,6 +57,7 @@ public class MakeADiamond  implements Directions{
 		bobbie.turnLeft();
 		bobbie.turnLeft();
 	}
+	
 	
 	private void reset() {
 		bobbie.turnLeft();
